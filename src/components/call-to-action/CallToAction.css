@@ -1,0 +1,80 @@
+/*===============================
+	Start Call to action CSS
+=================================*/
+.call-action {
+    position: relative;
+    background-image: url("../../assets/images/call-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-attachment: fixed;
+    /* transition: background-position 0.1s ease-out; */
+}
+
+.call-action .content {
+    position: relative;
+    text-align: center;
+    padding: 100px 265px;
+}
+
+.call-action .content h2 {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 46px;
+}
+
+.call-action .content p {
+    color: #fff;
+    margin: 30px 0px;
+    font-size: 15px;
+}
+
+.call-action .content .bton {
+    background: #fff;
+    margin-right: 20px;
+    font-weight: 500;
+    border: 1px solid #fff;
+    color: #1a76d1;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.call-action .content .bton:before {
+    background: #1a76d1;
+}
+
+.call-action .content .bton:hover {
+    background: #1a76d1;
+    color: #fff;
+}
+
+.call-action .content .bton:last-child {
+    margin-right: 0px;
+}
+
+.call-action .content .second {
+    border: 1px solid #fff;
+    color: #fff;
+    background: transparent;
+}
+
+.call-action .content .second:before {
+    background: #fff;
+}
+
+.call-action .content .second:hover {
+    color: #1a76d1;
+    border-color: transparent;
+    background: #fff;
+}
+
+.call-action .content .second i {
+    margin-left: 10px;
+}
+
+/*===============================
+      End Call to action CSS
+  =================================*/

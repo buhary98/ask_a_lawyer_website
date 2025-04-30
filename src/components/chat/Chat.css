@@ -1,0 +1,39 @@
+.chat-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #1A76D1;
+  border: none;
+  border-radius: 50%;
+  padding: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.chat-icon {
+  color: #ffffff;
+  font-size: 40px;
+  transition: color 0.3s ease-in-out;
+}
+
+.chat-button:hover {
+  background-color: transparent;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.chat-button:hover .chat-icon {
+  color: #1A76D1;
+}
+
+.chat-button:focus {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+.chat-button:active {
+  transform: scale(0.95);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}

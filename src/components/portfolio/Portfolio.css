@@ -1,0 +1,208 @@
+/*==========================
+	Start Portfolio CSS
+============================*/
+.portfolio {
+    background: #FDFDFD;
+}
+
+.portfolio .single-pf {
+    position: relative;
+}
+
+.portfolio .single-pf img {
+    height: 100%;
+    width: 100%;
+}
+
+.portfolio .single-pf:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: #1a76d1;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    z-index: 1;
+}
+
+.portfolio .single-pf:hover:before {
+    opacity: 0.7;
+    visibility: visible;
+}
+
+.portfolio .single-pf .bton {
+    color: #1a76d1;
+    z-index: 3;
+    background: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 0px;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    height: 48px;
+    width: 150px;
+    text-align: center;
+    line-height: 48px;
+    padding: 0;
+    font-weight: 500;
+    font-size: 14px;
+    margin-left: -75px;
+    margin-top: -24px;
+    border-radius: 4px;
+}
+
+.portfolio .single-pf:hover .bton {
+    opacity: 1;
+    visibility: visible;
+}
+
+.portfolio .single-pf .bton:hover {
+    color: #fff;
+}
+
+.portfolio .owl-nav {
+    display: none;
+}
+
+/* Slider Nav */
+.pf-details .image-slider .owl-nav {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    margin-top: -25px;
+}
+
+.pf-details .image-slider .owl-carousel .owl-nav div {
+    height: 50px;
+    width: 50px;
+    line-height: 45px;
+    background: #fff;
+    color: #1A76D1;
+    position: absolute;
+    margin: 0;
+    border-radius: 100%;
+    font-size: 20px;
+    text-align: center;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    box-shadow: 0px 0px 10px #0000001a;
+}
+
+.pf-details .image-slider .owl-carousel .owl-nav div:hover {
+    color: #fff;
+    background: #1A76D1;
+}
+
+.pf-details .image-slider .owl-carousel .owl-controls .owl-nav .owl-prev {
+    left: 20px;
+}
+
+.pf-details .image-slider .owl-carousel .owl-controls .owl-nav .owl-next {
+    right: 20px;
+}
+
+.pf-details .image-slider {
+    border-radius: 8px 8px 0 0;
+}
+
+.pf-details .image-slider img {
+    height: 100%;
+    width: 100%;
+}
+
+.pf-details .date {
+    background: #1a76d1;
+    display: block;
+    padding: 20px;
+    text-align: center;
+    border-radius: 0;
+    border: none;
+    margin: 0;
+    margin-top: -1px;
+}
+
+.pf-details .date ul li {
+    font-size: 16px;
+    color: #fff;
+    display: inline-block;
+    margin-right: 60px;
+}
+
+.pf-details .date ul li:last-child {
+    margin: 0;
+}
+
+.pf-details .date ul li span {
+    font-weight: 500;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.pf-details .body-text {}
+
+.pf-details .body-text h3 {
+    font-size: 30px;
+    font-weight: 600;
+    color: #333;
+    margin-top: 40px;
+}
+
+.pf-details .body-text p {
+    margin-top: 20px;
+}
+
+.pf-details .body-text .share {
+    margin-top: 40px;
+}
+
+.pf-details .body-text .share h4 {
+    font-size: 15px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.pf-details .body-text .share ul {
+    display: inline-block;
+    margin-left: 12px;
+}
+
+.pf-details .body-text .share ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.pf-details .body-text .share ul li:last-child {
+    margin-right: 0;
+}
+
+.pf-details .body-text .share ul li a {
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    text-align: center;
+    border: 1px solid #C8C8C8;
+    color: #757575;
+    display: block;
+    border-radius: 50%;
+}
+
+.pf-details .body-text .share ul li a:hover {
+    color: #fff;
+    border-color: transparent;
+    background: #1A76D1;
+}
+
+/*==========================
+	End Portfolio CSS
+============================*/

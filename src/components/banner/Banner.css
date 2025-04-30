@@ -1,0 +1,152 @@
+/*===========================
+	Start Hero Banner CSS
+=============================*/
+.slider .single-slider {
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.slider .single-slider .text {
+    margin-top: 120px;
+    margin-left: 50px;
+}
+
+.slider.index2 .single-slider .text {
+    margin-top: 150px;
+}
+
+.slider .single-slider h1 {
+    color: #2C2D3F;
+    font-size: 38px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    line-height: 42px;
+}
+
+.slider .single-slider h1 span {
+    color: #1a76d1;
+}
+
+.slider .single-slider p {
+    color: #2C2D3F;
+    margin-top: 27px;
+    font-weight: 400;
+}
+
+.slider .single-slider .button {
+    margin-top: 30px;
+}
+
+.slider .single-slider .bton {
+    color: #fff;
+    background: #1a76d1;
+    font-weight: 500;
+    text-align: center;
+    display: inline-block;
+    margin: 0;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.slider .single-slider .bton:last-child {
+    margin: 0;
+}
+
+.slider .single-slider .bton.primary {
+    background: #2C2D3F;
+    color: #fff;
+}
+
+.slider .single-slider .bton.primary:before {
+    background: #1A76D1;
+}
+
+/* Navigation buttons */
+.slider .swiper-button-prev,
+.slider .swiper-button-next {
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: #1A76D1;
+    color: #fff;
+    font-size: 20px !important;
+    position: absolute;
+    top: 54%;
+    transform: translateY(-50%);
+    transition: all 0.4s ease;
+    border-radius: 50%;
+}
+
+.slider .swiper-button-prev:hover,
+.slider .swiper-button-next:hover {
+    background: #2C2D3F;
+    color: #fff;
+}
+
+.slider .swiper-button-prev::after,
+.slider .swiper-button-next::after {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.slider .swiper-button-prev i,
+.slider .swiper-button-next i {
+    font-size: 15px;
+}
+
+.slider .swiper-button-prev {
+    left: 20px;
+}
+
+.slider .swiper-button-next {
+    right: 20px;
+}
+
+/* Slider Animation */
+.swiper-slide-active .text h1 {
+    opacity: 0;
+    animation: fadeInUp 1s forwards 0.6s;
+}
+
+.swiper-slide-active .text p {
+    opacity: 0;
+    animation: fadeInUp 1s forwards 1s;
+}
+
+.swiper-slide-active .text .button {
+    opacity: 0;
+    animation: fadeInDown 1s forwards 1.5s;
+}
+
+/* Keyframe animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*===========================
+	End Hero Banner CSS
+=============================*/
