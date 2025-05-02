@@ -64,18 +64,20 @@
 }
 
 .blog .single-news .news-body h2 {
+    color: #2C2D3F;
+    cursor: pointer;
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 10px;
     line-height: 24px;
 }
 
-.blog .single-news .news-body h2 a {
+/* .blog .single-news .news-body h2 a {
     color: #2C2D3F;
     font-weight: 500;
-}
+} */
 
-.blog .single-news .news-body h2 a:hover {
+.blog .single-news .news-body h2:hover {
     color: #1A76D1;
 }
 

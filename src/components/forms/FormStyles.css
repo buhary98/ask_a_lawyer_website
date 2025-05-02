@@ -3,6 +3,10 @@
     padding-top: 100px;
 }
 
+.appointment .btn-margin {
+    margin-bottom: 60px;
+}
+
 .appointment .single-page {
     width: 45%;
     text-align: center;

@@ -14,10 +14,11 @@ const Footer = () => {
               <div className="single-footer">
                 <h2>About Us</h2>
                 <p>
-                  At Chaudhry Solicitors, we understand that&nbsp;legal issues can be
-                  complex and overwhelming. That’s why we’ve created Ask a
-                  Lawyer—an accessible, user-friendly platform designed to
-                  connect you with experienced legal professionals for reliable&nbsp;advice and guidance.
+                  At Chaudhry Solicitors, we understand that&nbsp;legal issues
+                  can be complex and overwhelming. That’s why we’ve created Ask
+                  a Lawyer—an accessible, user-friendly platform designed to
+                  connect you with experienced legal professionals for
+                  reliable&nbsp;advice and guidance.
                 </p>
                 {/* Social Links */}
                 <ul className="social">
@@ -62,7 +63,7 @@ const Footer = () => {
                       <ul>
                         {column.map((link) => (
                           <li key={link}>
-                            <div href="#">
+                            <div>
                               <i
                                 className="fa-solid fa-caret-right"
                                 aria-hidden="true"
@@ -138,7 +139,8 @@ const Footer = () => {
             <div className="col-lg-12 col-md-12 col-12">
               <div className="copyright-content">
                 <p>
-                  © Copyright 2025 Ask A Lawyer | All Rights Reserved
+                  © Copyright 2025 Ask A Lawyer (Chaudhry Solicitors) | All
+                  Rights Reserved
                   {/* <a
                     href="https://www.wpthemesgrid.com"
                     target="_blank"

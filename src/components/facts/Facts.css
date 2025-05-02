@@ -1,20 +1,16 @@
 /*=======================
 	Start Fun Facts CSS
 =========================*/
-.fun-facts {
-    position: relative;
-}
-
 .fun-facts.section {
     padding: 120px 0;
 }
 
 .fun-facts {
-    background: url('../../assets/images/blog1.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
     position: relative;
+    background: url('../../assets/images/facts.png');
+    background-size: 50%;
     background-position: center;
+    background-repeat: no-repeat;
     background-attachment: fixed;
 }
 

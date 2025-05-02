@@ -108,7 +108,7 @@ const Lawyers = () => {
                   <div className="lawyer-overlay">
                     <h4>{lawyer.name}</h4>
                     <span>{lawyer.title}</span>
-                    {/* <p>{lawyer.description}</p> */}
+                    <p>{lawyer.description}</p>
                   </div>
                 </div>
               </SwiperSlide>

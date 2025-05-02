@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import emailjs from "emailjs-com";
@@ -64,6 +65,19 @@ const AppointmentForm = () => {
     <section className="appointment">
       <div className="container single-page">
         <div className="row">
+          <div className="col-lg-12 col-md-12 col-12">
+            <Link to="/" className="bton btn-margin">
+              <i
+                className="fas fa-home"
+                style={{
+                  paddingRight: "15px",
+                }}
+              ></i>
+              Back to Home
+            </Link>
+          </div>
+        </div>
+        <div className="row">
           <div className="col-lg-12">
             <div className="section-title">
               <h2>
@@ -71,6 +85,7 @@ const AppointmentForm = () => {
                 <br />
                 Schedule an Appointment With Us
               </h2>
+              <i className="fas fa-gavel"></i>
               <p>
                 Need legal support? Schedule an appointment with our experienced
                 lawyers at your convenience. We offer personalized consultations
@@ -80,7 +95,6 @@ const AppointmentForm = () => {
             </div>
           </div>
         </div>
-
         <div className="row">
           <div className="col-lg-12 col-md-12 col-12">
             <form className="form" onSubmit={handleSubmit}>

@@ -130,7 +130,7 @@ button,
 html input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  -webkit-appearance: button;
+  /* -webkit-appearance: button; */
   cursor: pointer;
 }
 
@@ -523,7 +523,6 @@ Preloader Area CSS
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   border: none;
-  border-radius: 0;
   border-radius: 4px;
   text-decoration: none;
   cursor: pointer;
@@ -553,6 +552,30 @@ Preloader Area CSS
 }
 
 .bton:hover:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.bton-1:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #2C2D3F;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  border-radius: 150px;
+}
+
+.bton-1:hover:before {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
@@ -710,7 +733,7 @@ Preloader Area CSS
   font-size: 15px;
 }
 
-.pagination .pagination-list li a i {}
+/* .pagination .pagination-list li a i {} */
 
 .blog-grids.pagination {
   margin-top: 50px;
@@ -858,9 +881,9 @@ a {
   color: inherit;
 }
 
-a:visited {
+/* a:visited {
   color: inherit;
-}
+} */
 
 a:hover,
 a:focus,
@@ -1283,14 +1306,14 @@ body {
   font-size: 15px;
 }
 
-.pro-features .button {}
+/* .pro-features .button {} */
 
 .pro-features .button .bton {
   width: 100%;
   text-align: center;
   margin-top: 8px;
   display: inline-block;
-  float: left;
+  /* float: left; */
   font-size: 13px;
   width: 100%;
   text-transform: capitalize;
@@ -1321,7 +1344,7 @@ body {
   border: none;
 }
 
-.get-pro:hover {}
+/* .get-pro:hover {} */
 
 #scrollUp {
   bottom: 15px;
@@ -1732,6 +1755,10 @@ End Global CSS
     margin: 10px 0 !important;
   }
 
+  .fun-facts {
+    background-size: 85% !important;
+  }
+
   .fun-facts.section {
     padding: 70px 0 !important;
     margin-top: 70px !important;
@@ -1775,6 +1802,10 @@ End Global CSS
 
   .appointment .appointment-image {
     margin-top: 20px !important;
+  }
+
+  .call-action {
+    background-size: 85% !important;
   }
 
   .call-action .content {
@@ -1866,6 +1897,11 @@ End Global CSS
   .appointment .single-page .work-hour {
     margin-top: 30px !important;
   }
+
+  .pricing-table .section-content {
+    margin: 35px 0px !important;
+    padding: 0 80px !important;
+}
 
   .blog .single-news {
     margin: 15px 0 !important;
@@ -2333,6 +2369,10 @@ End Global CSS
     font-size: 20px !important;
   }
 
+  .fun-facts {
+    background-size: 85% !important;
+  }
+
   .fun-facts.section {
     padding: 70px 0 !important;
     margin-top: 70px !important;
@@ -2369,6 +2409,10 @@ End Global CSS
   .why-choose .choose-right {
     height: 350px !important;
     margin-top: 30px !important;
+  }
+
+  .call-action {
+    background-size: 85% !important;
   }
 
   .call-action .content {
@@ -2495,6 +2539,11 @@ End Global CSS
     margin-top: 30px !important;
   }
 
+  .pricing-table .section-content {
+    margin: 30px 0px !important;
+    padding: 0 20px !important;
+}
+
   .blog .single-news {
     margin: 15px 0 !important;
   }
@@ -2522,7 +2571,7 @@ End Global CSS
     display: inline-block !important;
     margin-top: -6px !important;
     margin-left: 56px !important;
-    float: left !important;
+    /* float: left !important; */
   }
 
   .news-single .image-gallery .single-image {
@@ -2534,7 +2583,7 @@ End Global CSS
   }
 
   .news-single .social-share li {
-    float: left !important;
+    /* float: left !important; */
     display: inline-block !important;
     margin: 5px !important;
   }
@@ -2974,6 +3023,11 @@ End Global CSS
     font-size: 20px !important;
   }
 
+  .fun-facts {
+    background-size: 100% !important;
+    background-repeat: repeat-y !important;
+  }
+
   .fun-facts.section {
     padding: 70px 0 !important;
     margin-top: 70px !important;
@@ -3005,6 +3059,10 @@ End Global CSS
   .why-choose .choose-right {
     height: 350px !important;
     margin-top: 30px !important;
+  }
+
+  .call-action {
+    background-size: 100% !important;
   }
 
   .call-action .content {
@@ -3106,6 +3164,11 @@ End Global CSS
   .appointment .single-page .appointment-inner {
     padding: 25px !important;
   }
+
+  .pricing-table .section-content {
+    margin: 30px 0px !important;
+    padding: 0 20px !important;
+}
 
   .blog .single-news {
     margin: 15px 0 !important;

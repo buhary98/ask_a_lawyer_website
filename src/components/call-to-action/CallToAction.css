@@ -4,9 +4,9 @@
 .call-action {
     position: relative;
     background-image: url("../../assets/images/call-bg.png");
+    background-size: 50%;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 40%;
     background-attachment: fixed;
     /* transition: background-position 0.1s ease-out; */
 }

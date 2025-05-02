@@ -27,13 +27,13 @@ import Feautes from "./components/feautes/Feautes";
 import Testimonials from "./components/testimonials/Testimonials";
 import PricingTable from "./components/price/PricingTable";
 // import Blog from "./components/blog/Blog";
-// import Clients from "./components/clients/Clients";
+import FaQ from "./components/faq/FaQ";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
+// import ClientPortal from "./components/client-portal/ClientPortal";
 import AppointmentForm from "./components/forms/AppointmentForm";
 import SubscriptionForm from "./components/forms/SubscriptionForm";
 import Chat from "./components/chat/Chat";
-import FaQ from "./components/faq/FaQ";
 
 function App() {
   const [showPreLoader, setShowPreLoader] = useState(true);
@@ -70,6 +70,7 @@ function App() {
               <Feautes />
               <Testimonials />
               <PricingTable />
+              {/* <Blog /> */}
               <FaQ />
               <Contact />
               <Footer />
@@ -77,6 +78,7 @@ function App() {
             </>
           }
         />
+        {/* <Route path="/client-portal" element={<ClientPortal />} /> */}
         <Route path="/appointment" element={<AppointmentForm />} />
         <Route path="/subscription" element={<SubscriptionForm />} />
       </Routes>

@@ -4,9 +4,9 @@
 .testimonials {
     position: relative;
     background-image: url("../../assets/images/testimonials-bg.png");
+    background-size: 50%;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 50%;
     background-attachment: fixed;
 }
 

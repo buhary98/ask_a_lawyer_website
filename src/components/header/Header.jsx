@@ -6,7 +6,7 @@ import logo from "../../assets/images/logo.png";
 
 const Header = () => {
   const sectionArray = useMemo(
-    () => ["home", "about", "services", "pricing", "blogs", "fAQs", "contact"],
+    () => ["home", "about", "services", "pricing", "fAQs", "contact"],
     []
   );
 
@@ -140,10 +140,29 @@ const Header = () => {
                   </ul>
                 </nav>
               </div>
-              <div className="col-lg-2 col-md-1 col-12">
+              <div className="col-lg-1 col-md-1 col-12">
                 <div className="get-quote">
-                  <Link to="/appointment" className="bton">
-                    Login/Register
+                  <a
+                    href="https://ahsuite.com/login"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bton-1"
+                    style={{ borderRadius: "150px", background: "#1A76D1" }}
+                  >
+                    <i className="fas fa-user"></i>
+                    {/* User Login */}
+                  </a>
+                </div>
+              </div>
+              <div className="col-lg-1 col-md-1 col-12">
+                <div className="get-quote">
+                  <Link
+                    to="/"
+                    className="bton-1"
+                    style={{ borderRadius: "150px", background: "gray"}}
+                  >
+                    <i className="fas fa-graduation-cap"></i>
+                    {/* Our Course */}
                   </Link>
                 </div>
               </div>

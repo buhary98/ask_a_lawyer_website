@@ -22,29 +22,6 @@
     padding: 15px 0;
 }
 
-/* .top-link {
-    float: left;
-}
-
-.top-link li {
-    display: inline-block;
-    margin-right: 15px;
-}
-
-.top-link li:last-child {
-    margin-right: 0px;
-}
-
-.top-link li a {
-    color: #2C2D3F;
-    font-size: 14px;
-    font-weight: 400;
-}
-
-.top-link li:hover a {
-    color: #1A76D1;
-} */
-
 .top-contact {
     /* float: right; */
     text-align: center;
@@ -86,6 +63,18 @@
 
 .get-quote .bton {
     color: #fff;
+}
+
+.get-quote .bton-1 {
+    padding: 13px 25px;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    box-shadow: none;
+    display: inline-block;
+    border: none;
+    border-radius: 4px;
 }
 
 .header .logo {
@@ -166,73 +155,6 @@
     font-size: 13px;
 }
 
-/* Middle Header */
-.header.style2 .header-inner {
-    border-top: 1px solid #eee;
-}
-
-.header.style2 .logo {
-    margin-top: 6px;
-}
-
-.header .middle-header {
-    background: #fff;
-    padding: 20px 0px;
-}
-
-.header .widget-main {
-    float: right;
-}
-
-.header.style2 .get-quote {
-    margin-top: 0;
-}
-
-.header .single-widget {
-    position: relative;
-    float: left;
-    margin-right: 30px;
-    padding-left: 55px;
-}
-
-.header .single-widget:last-child {
-    margin: 0;
-}
-
-.header .single-widget .logo {
-    margin: 0;
-    padding: 0;
-    margin-top: 7px;
-}
-
-.header .single-widget i {
-    position: absolute;
-    left: 0;
-    top: 6px;
-    height: 40px;
-    width: 40px;
-    line-height: 40px;
-    color: #fff;
-    background: #1A76D1;
-    border-radius: 4px;
-    text-align: center;
-    font-size: 15px;
-}
-
-.header .single-widget h4 {
-    font-size: 15px;
-    font-weight: 500;
-}
-
-.header .single-widget p {
-    margin-bottom: 5px;
-    text-transform: capitalize;
-}
-
-.header .single-widget.bton {
-    margin-left: 0;
-}
-
 /* Dropdown Menu */
 .header .nav li .dropdown {
     background: #fff;
@@ -300,7 +222,7 @@
 }
 
 /* Right Bar */
-.header.style2 .main-menu {
+/* .header.style2 .main-menu {
     display: inline-block;
     float: left;
 }
@@ -337,10 +259,10 @@
 .header .search-top.active .search i:before {
     content: "\eee1";
     font-size: 15px;
-}
+} */
 
 /* Search */
-.header .search-form {
+/* .header .search-form {
     position: absolute;
     right: 0;
     z-index: 9999;
@@ -393,7 +315,7 @@
     background: #fff;
     color: #1A76D1;
     border-color: #e6e6e6;
-}
+} */
 
 /* Header Sticky */
 .header.sticky .header-inner {

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import emailjs from "emailjs-com";
 
 import Modal from "./Modal";
@@ -63,9 +64,23 @@ const SubscriptionForm = () => {
     <section className="appointment">
       <div className="container single-page">
         <div className="row">
+          <div className="col-lg-12 col-md-12 col-12">
+            <Link to="/" className="bton btn-margin">
+              <i
+                className="fas fa-home"
+                style={{
+                  paddingRight: "15px",
+                }}
+              ></i>
+              Back to Home
+            </Link>
+          </div>
+        </div>
+        <div className="row">
           <div className="col-lg-12">
             <div className="section-title">
               <h2>Subscribe Now for Trusted Legal Resources and Info</h2>
+              <i className="fas fa-gavel"></i>
               <p>
                 Stay updated with the latest legal news, expert tips, and
                 service updates. Subscribe to our newsletter and get valuable
@@ -266,17 +281,11 @@ const SubscriptionForm = () => {
               </div>
 
               <div className="row">
-                <div className="col-lg-6 col-md-6 col-12">
+                <div className="col-lg-12 col-md-12 col-12">
                   <div className="form-group">
                     <button type="submit" className="bton">
-                      Subscribe
+                      Pay & Subscribe
                     </button>
-                  </div>
-                </div>
-
-                <div className="col-lg-6 col-md-6 col-12">
-                  <div className="form-group">
-                    <button className="bton">Pay Now</button>
                   </div>
                 </div>
               </div>
