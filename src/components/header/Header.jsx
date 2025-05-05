@@ -1,17 +1,23 @@
-import { useState, useEffect, useMemo, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
 import { FaUser, FaGraduationCap, FaCalendarCheck } from "react-icons/fa";
 
 import MobileNav from "./MobileNav";
+
 import LogoSmall from "../../assets/images/favicon.png";
 import LogoLarge from "../../assets/images/logo.png";
 
 const Header = () => {
-  const sectionArray = useMemo(
-    () => ["home", "about", "services", "pricing", "blogs", "fAQs", "contact"],
-    []
-  );
+  const sectionArray = [
+    "home",
+    "about",
+    "services",
+    "pricing",
+    "blogs",
+    "fAQs",
+    "contact",
+  ];
 
   const sectionLabels = {
     home: "Home",
@@ -26,6 +32,8 @@ const Header = () => {
   const [isSticky, setIsSticky] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+
+  const headerRef = useRef(null);
   const menuRef = useRef(null);
   const toggleBtnRef = useRef(null);
 
@@ -38,7 +46,7 @@ const Header = () => {
 
     const observerCallback = (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting && entry.target.id !== activeSection) {
           setActiveSection(entry.target.id);
         }
       });
@@ -58,8 +66,16 @@ const Header = () => {
   }, [sectionArray]);
 
   useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      setIsSticky(window.scrollY > 400);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setIsSticky(window.scrollY > 400);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -86,9 +102,9 @@ const Header = () => {
     setIsOpen(false);
 
     setTimeout(() => {
-      const header = document.querySelector(".header");
-
-      let headerHeight = header ? header.offsetHeight + 80 : 100;
+      let headerHeight = headerRef.current
+        ? headerRef.current.offsetHeight + 80
+        : 100;
 
       if (id === "home") {
         window.scrollTo({ top: 0, behavior: "smooth" });
@@ -104,7 +120,7 @@ const Header = () => {
   };
 
   return (
-    <header className={`header ${isSticky ? "sticky" : ""}`}>
+    <header ref={headerRef} className={`header ${isSticky ? "sticky" : ""}`}>
       <div className="header-inner">
         <div className="row">
           <div className="col-lg-2 col-md-1 d-flex d-lg-block align-items-center">
