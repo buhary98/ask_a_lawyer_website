@@ -1,10 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 
-import BannerImg1 from "../../assets/images/slider1.png";
-import BannerImg2 from "../../assets/images/slider2.png";
-import BannerImg3 from "../../assets/images/slider3.png";
+import BannerImg1Lg from "../../assets/images/slider-lg-1.png";
+import BannerImg1Md from "../../assets/images/slider-md-1.png";
+import BannerImg1Sm from "../../assets/images/slider-sm-1.png";
+
+import BannerImg2Lg from "../../assets/images/slider-lg-2.png";
+import BannerImg2Md from "../../assets/images/slider-md-2.png";
+import BannerImg2Sm from "../../assets/images/slider-sm-2.png";
+
+import BannerImg3Lg from "../../assets/images/slider-lg-3.png";
+import BannerImg3Md from "../../assets/images/slider-md-3.png";
+import BannerImg3Sm from "../../assets/images/slider-sm-3.png";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -12,7 +20,9 @@ import "./Banner.css";
 
 const slides = [
   {
-    image: BannerImg1,
+    imageLg: BannerImg1Lg,
+    imageMd: BannerImg1Md,
+    imageSm: BannerImg1Sm,
     headingText1: "Get Instant",
     headingText2: "Legal Help",
     headingText3: "from",
@@ -23,7 +33,9 @@ const slides = [
     link: "contact",
   },
   {
-    image: BannerImg2,
+    imageLg: BannerImg2Lg,
+    imageMd: BannerImg2Md,
+    imageSm: BannerImg2Sm,
     headingText1: "",
     headingText2: "Legal Services",
     headingText3: "with Clear & Fair",
@@ -34,7 +46,9 @@ const slides = [
     link: "pricing",
   },
   {
-    image: BannerImg3,
+    imageLg: BannerImg3Lg,
+    imageMd: BannerImg3Md,
+    imageSm: BannerImg3Sm,
     headingText1: "Your",
     headingText2: "Legal Issues,",
     headingText3: "Handled with",
@@ -46,17 +60,34 @@ const slides = [
   },
 ];
 
+const getResponsiveImage = (slide) => {
+  if (window.matchMedia("(max-width: 767px)").matches) return slide.imageSm;
+  if (window.matchMedia("(max-width: 991px)").matches) return slide.imageMd;
+  return slide.imageLg;
+};
+
 const Banner = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [screenImage, setScreenImage] = useState(getResponsiveImage(slides[0]));
 
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
     if (section) {
-      const offset = 100;
+      const offset = document.querySelector("header")?.offsetHeight + 80 || 100;
       const top = section.offsetTop - offset;
       window.scrollTo({ top, behavior: "smooth" });
     }
   };
+
+  useEffect(() => {
+    const updateImage = () => {
+      setScreenImage(getResponsiveImage(slides[activeIndex]));
+    };
+
+    updateImage();
+    window.addEventListener("resize", updateImage);
+    return () => window.removeEventListener("resize", updateImage);
+  }, [activeIndex]);
 
   return (
     <section className="slider" id="home">
@@ -69,37 +100,40 @@ const Banner = () => {
         slidesPerView={1}
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
       >
-        {slides.map((slide, index) => (
-          <SwiperSlide
-            key={index}
-            className={index === activeIndex ? "swiper-slide-active" : ""}
-          >
-            <div
-              className="single-slider"
-              style={{ backgroundImage: `url(${slide.image})` }}
+        {slides.map((slide, index) => {
+          const image = getResponsiveImage(slide);
+          return (
+            <SwiperSlide
+              key={index}
+              className={index === activeIndex ? "swiper-slide-active" : ""}
             >
-              <div className="container">
-                <div className="row">
-                  <div className="col-lg-6">
-                    <div className="text">
-                      <h1>
-                        {slide.headingText1} <span>{slide.headingText2}</span>{" "}
-                        {slide.headingText3} <span>{slide.headingText4}</span>
-                      </h1>
-                      <p>{slide.subHeadingText}</p>
-                      <div
-                        className="button bton"
-                        onClick={() => scrollToSection(slide.link)}
-                      >
-                        {slide.buttonText}
+              <div
+                className="single-slider"
+                style={{ backgroundImage: `url(${image})` }}
+              >
+                <div className="container">
+                  <div className="row">
+                    <div className="col-lg-6">
+                      <div className="text">
+                        <h1>
+                          {slide.headingText1} <span>{slide.headingText2}</span>{" "}
+                          {slide.headingText3} <span>{slide.headingText4}</span>
+                        </h1>
+                        <p>{slide.subHeadingText}</p>
+                        <button
+                          className="button bton"
+                          onClick={() => scrollToSection(slide.link)}
+                        >
+                          {slide.buttonText}
+                        </button>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </SwiperSlide>
-        ))}
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
     </section>
   );

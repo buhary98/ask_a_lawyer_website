@@ -9,15 +9,11 @@
 }
 
 .slider .single-slider .text {
-    margin-top: 120px;
+    margin-top: 200px;
     margin-left: 50px;
 }
 
-.slider.index2 .single-slider .text {
-    margin-top: 150px;
-}
-
-.slider .single-slider h1 {
+.slider .single-slider .text h1 {
     color: #2C2D3F;
     font-size: 38px;
     font-weight: 700;
@@ -26,21 +22,21 @@
     line-height: 42px;
 }
 
-.slider .single-slider h1 span {
+.slider .single-slider .text h1 span {
     color: #1a76d1;
 }
 
-.slider .single-slider p {
+.slider .single-slider .text p {
     color: #2C2D3F;
     margin-top: 27px;
     font-weight: 400;
 }
 
-.slider .single-slider .button {
+.slider .single-slider .text .button {
     margin-top: 30px;
 }
 
-.slider .single-slider .bton {
+.slider .single-slider .text .bton {
     color: #fff;
     background: #1a76d1;
     font-weight: 500;
@@ -51,16 +47,16 @@
     cursor: pointer;
 }
 
-.slider .single-slider .bton:last-child {
+.slider .single-slider .text .bton:last-child {
     margin: 0;
 }
 
-.slider .single-slider .bton.primary {
+.slider .single-slider .text .bton.primary {
     background: #2C2D3F;
     color: #fff;
 }
 
-.slider .single-slider .bton.primary:before {
+.slider .single-slider .text .bton.primary:before {
     background: #1A76D1;
 }
 

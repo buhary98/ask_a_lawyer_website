@@ -63,7 +63,7 @@ const Header = () => {
     });
 
     return () => observer.disconnect();
-  }, [sectionArray]);
+  }, [activeSection]);
 
   useEffect(() => {
     let ticking = false;
