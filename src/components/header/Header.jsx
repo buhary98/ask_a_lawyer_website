@@ -1,14 +1,27 @@
 import { useState, useEffect, useMemo, useRef } from "react";
 import { Link } from "react-router-dom";
 
+import { FaUser, FaGraduationCap, FaCalendarCheck } from "react-icons/fa";
+
 import MobileNav from "./MobileNav";
-import logo from "../../assets/images/logo.png";
+import LogoSmall from "../../assets/images/favicon.png";
+import LogoLarge from "../../assets/images/logo.png";
 
 const Header = () => {
   const sectionArray = useMemo(
-    () => ["home", "about", "services", "pricing", "fAQs", "contact"],
+    () => ["home", "about", "services", "pricing", "blogs", "fAQs", "contact"],
     []
   );
+
+  const sectionLabels = {
+    home: "Home",
+    about: "About",
+    services: "Services",
+    pricing: "Pricing",
+    blogs: "Blogs",
+    fAQs: "FAQs",
+    contact: "Contact",
+  };
 
   const [isSticky, setIsSticky] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -17,31 +30,41 @@ const Header = () => {
   const toggleBtnRef = useRef(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollPos = window.scrollY;
+    const observerOptions = {
+      root: null,
+      rootMargin: "-120px 0px -60% 0px",
+      threshold: 0,
+    };
 
-      if (scrollPos > 400) {
-        setIsSticky(true);
-      } else {
-        setIsSticky(false);
-      }
-
-      sectionArray.forEach((section) => {
-        const sectionElement = document.getElementById(section);
-        if (sectionElement) {
-          const offsetSection = sectionElement.offsetTop - 100;
-          if (scrollPos >= offsetSection) {
-            setActiveSection(section);
-          }
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
         }
       });
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    const observer = new IntersectionObserver(
+      observerCallback,
+      observerOptions
+    );
+
+    sectionArray.forEach((id) => {
+      const section = document.getElementById(id);
+      if (section) observer.observe(section);
+    });
+
+    return () => observer.disconnect();
   }, [sectionArray]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsSticky(window.scrollY > 400);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -64,24 +87,16 @@ const Header = () => {
 
     setTimeout(() => {
       const header = document.querySelector(".header");
-      const mobileNav = document.querySelector(".mobile-nav");
 
       let headerHeight = header ? header.offsetHeight + 80 : 100;
-
-      if (window.innerWidth <= 768 && mobileNav) {
-        mobileNav.style.display = "none";
-        headerHeight = header ? header.offsetHeight : 100;
-        mobileNav.style.display = "";
-      }
-
-      const offset = headerHeight;
 
       if (id === "home") {
         window.scrollTo({ top: 0, behavior: "smooth" });
       } else {
         const section = document.getElementById(id);
         if (section) {
-          const top = section.offsetTop - offset;
+          const top =
+            section.getBoundingClientRect().top + window.scrollY - headerHeight;
           window.scrollTo({ top, behavior: "smooth" });
         }
       }
@@ -91,87 +106,113 @@ const Header = () => {
   return (
     <header className={`header ${isSticky ? "sticky" : ""}`}>
       <div className="header-inner">
-        <div className="container">
-          <div className="inner">
-            <div className="row">
-              <div className="col-lg-2 col-md-2 col-12">
-                <div className="logo">
-                  <a href="/">
-                    <img src={logo} alt="Logo" />
-                  </a>
-                </div>
-                <div className="d-flex justify-content-end">
-                  <button
-                    ref={toggleBtnRef}
-                    className={`mob_bton ${isOpen ? "open" : ""}`}
-                    onClick={() => setIsOpen((prev) => !prev)}
-                    aria-haspopup="true"
-                    aria-expanded={isOpen}
+        <div className="row">
+          <div className="col-lg-2 col-md-1 d-flex d-lg-block align-items-center">
+            <div className="logo d-none d-lg-block me-2">
+              <a href="/">
+                <img src={LogoLarge} alt="Ask A Lawyer Logo Large" />
+              </a>
+            </div>
+            <div className="logo d-block d-lg-none me-2">
+              <a href="/">
+                <img src={LogoSmall} alt="Ask A Lawyer Logo Small" />
+              </a>
+            </div>
+            <div className="d-flex d-md-none d-lg-none align-items-center gap-2 flex-grow-1 justify-content-between">
+              <div className="mobile-bton d-flex align-items-center gap-2 ms-auto">
+                <a
+                  href="https://ahsuite.com/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bton-1 d-flex align-items-center"
+                >
+                  <FaUser />
+                </a>
+                <Link
+                  to="/appointment"
+                  className="bton-1 d-flex align-items-center"
+                >
+                  <FaCalendarCheck />
+                </Link>
+                <Link to="/" className="bton-2 d-flex align-items-center">
+                  <FaGraduationCap />
+                </Link>
+              </div>
+
+              <button
+                ref={toggleBtnRef}
+                className={`mob_bton ${isOpen ? "open" : ""}`}
+                onClick={() => setIsOpen((prev) => !prev)}
+                aria-haspopup="true"
+                aria-expanded={isOpen}
+              >
+                <span className="mob_icon mob_no-text">
+                  <span className="mob_icon-bar"></span>
+                  <span className="mob_icon-bar"></span>
+                  <span className="mob_icon-bar"></span>
+                </span>
+              </button>
+            </div>
+          </div>
+          <MobileNav
+            isOpen={isOpen}
+            menuRef={menuRef}
+            activeSection={activeSection}
+            scrollToSection={scrollToSection}
+          />
+          <div className="col-lg-5 col-md-8">
+            <nav className="navigation">
+              <ul className="nav menu">
+                {sectionArray.map((id) => (
+                  <li key={id} className={activeSection === id ? "active" : ""}>
+                    <div onClick={() => scrollToSection(id)}>
+                      {sectionLabels[id]}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
+          <div className="col-lg-5 col-md-3">
+            <div className="header-btn">
+              <div className="get-quote">
+                <a
+                  href="https://ahsuite.com/login"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bton-1"
+                  style={{ background: "#1A76D1" }}
+                >
+                  <FaUser />
+                  <span
+                    className="d-none d-lg-inline"
+                    style={{ paddingLeft: "10px" }}
                   >
-                    <span className="mob_menutxt"></span>
-                    <span className="mob_icon mob_no-text">
-                      <span className="mob_icon-bar"></span>
-                      <span className="mob_icon-bar"></span>
-                      <span className="mob_icon-bar"></span>
-                    </span>
-                  </button>
-                </div>
+                    User Login
+                  </span>
+                </a>
               </div>
-              <MobileNav
-                isOpen={isOpen}
-                menuRef={menuRef}
-                activeSection={activeSection}
-                scrollToSection={scrollToSection}
-              />
-              <div className="col-lg-6 col-md-8 col-12">
-                <nav className="navigation">
-                  <ul className="nav menu">
-                    {sectionArray.map((id) => (
-                      <li
-                        key={id}
-                        className={activeSection === id ? "active" : ""}
-                      >
-                        <div onClick={() => scrollToSection(id)}>
-                          {id.replace(/us/, " Us").charAt(0).toUpperCase() +
-                            id.replace(/us/, " Us").slice(1)}
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
-                </nav>
-              </div>
-              <div className="col-lg-1 col-md-1 col-12">
-                <div className="get-quote">
-                  <a
-                    href="https://ahsuite.com/login"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bton-1"
-                    style={{ borderRadius: "150px", background: "#1A76D1" }}
+              <div className="get-quote">
+                <Link to="/appointment" className="bton-1">
+                  <FaCalendarCheck />
+                  <span
+                    className="d-none d-lg-inline"
+                    style={{ paddingLeft: "10px" }}
                   >
-                    <i className="fas fa-user"></i>
-                    {/* User Login */}
-                  </a>
-                </div>
-              </div>
-              <div className="col-lg-1 col-md-1 col-12">
-                <div className="get-quote">
-                  <Link
-                    to="/"
-                    className="bton-1"
-                    style={{ borderRadius: "150px", background: "gray"}}
-                  >
-                    <i className="fas fa-graduation-cap"></i>
-                    {/* Our Course */}
-                  </Link>
-                </div>
-              </div>
-              <div className="col-lg-2 col-md-1 col-12">
-                <div className="get-quote">
-                  <Link to="/appointment" className="bton">
                     Book Appointment
-                  </Link>
-                </div>
+                  </span>
+                </Link>
+              </div>
+              <div className="get-quote">
+                <Link to="/" className="bton-1" style={{ background: "gray" }}>
+                  <FaGraduationCap />
+                  <span
+                    className="d-none d-lg-inline"
+                    style={{ paddingLeft: "10px" }}
+                  >
+                    Our Course
+                  </span>
+                </Link>
               </div>
             </div>
           </div>

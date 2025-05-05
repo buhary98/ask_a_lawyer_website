@@ -507,6 +507,38 @@ Preloader Area CSS
   }
 }
 
+.section {
+  margin-top: 100px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 0 250px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: 600;
+  text-transform: capitalize;
+  padding: 0px 120px;
+  margin-bottom: 25px;
+  position: relative;
+  color: #2C2D3F;
+}
+
+.section-title p {
+  font-size: 15px;
+  color: #888;
+  margin-top: 20px;
+}
+
+.section-title i {
+  font-size: 28px;
+  color: #1A76D1;
+  padding: 0px;
+}
+
 .bton {
   color: #fff;
   padding: 13px 25px;
@@ -556,61 +588,47 @@ Preloader Area CSS
   transform: scaleX(1);
 }
 
-.bton-1:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #2C2D3F;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transform-origin: 50%;
-  transform-origin: 50%;
+.bton-1 {
+  color: #fff;
+  padding: 13px 25px;
+  font-size: 14px;
+  text-transform: capitalize;
+  font-weight: 500;
+  background: #1A76D1;
+  ;
+  position: relative;
+  box-shadow: none;
+  display: inline-block;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  border-radius: 150px;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-.bton-1:hover:before {
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
-}
-
-.section {
-  /* padding: 100px 0; */
-  margin-top: 100px;
-}
-
-.section-title {
-  text-align: center;
-  margin-bottom: 60px;
-  padding: 0 250px;
-}
-
-.section-title h2 {
-  font-size: 32px;
-  font-weight: 600;
+.bton-2 {
+  color: #fff;
+  padding: 13px 25px;
+  font-size: 14px;
   text-transform: capitalize;
-  padding: 0px 120px;
-  margin-bottom: 25px;
+  font-weight: 500;
+  background: gray;
   position: relative;
-  color: #2C2D3F;
-}
-
-.section-title p {
-  font-size: 15px;
-  color: #888;
-  margin-top: 20px;
-}
-
-.section-title i {
-  font-size: 28px;
-  color: #1A76D1;
-  padding: 0px;
+  box-shadow: none;
+  display: inline-block;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* Overlay */
@@ -894,99 +912,6 @@ a:active {
 a:hover,
 a:active {
   outline: 0;
-}
-
-/*--------------------------------------------------------------
-## Menus
---------------------------------------------------------------*/
-.main-navigation {
-  clear: both;
-  display: block;
-  float: left;
-  width: 100%;
-}
-
-.main-navigation ul {
-  display: none;
-  list-style: none;
-  margin: 0;
-  padding-left: 0;
-}
-
-.main-navigation ul ul {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  float: left;
-  position: absolute;
-  top: 100%;
-  left: -999em;
-  z-index: 99999;
-}
-
-.main-navigation ul ul ul {
-  left: -999em;
-  top: 0;
-}
-
-.main-navigation ul ul li:hover>ul,
-.main-navigation ul ul li.focus>ul {
-  left: 100%;
-}
-
-.main-navigation ul ul a {
-  width: 200px;
-}
-
-.main-navigation ul li:hover>ul,
-.main-navigation ul li.focus>ul {
-  left: auto;
-}
-
-.main-navigation li {
-  float: left;
-  position: relative;
-}
-
-.main-navigation a {
-  display: block;
-  text-decoration: none;
-}
-
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block;
-}
-
-@media screen and (min-width: 37.5em) {
-  .menu-toggle {
-    display: none;
-  }
-
-  .main-navigation ul {
-    display: block;
-  }
-}
-
-.site-main .comment-navigation,
-.site-main .posts-navigation,
-.site-main .post-navigation {
-  margin: 0 0 1.5em;
-  overflow: hidden;
-}
-
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-  float: left;
-  width: 50%;
-}
-
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-  float: right;
-  text-align: right;
-  width: 50%;
 }
 
 /*--------------------------------------------------------------
@@ -1551,10 +1476,33 @@ End Global CSS
     font-size: 13px !important;
   }
 
+  .header .header-inner {
+    padding: 0px 20px !important;
+  }
+
+  .header .header-inner .header-btn {
+    gap: 10px !important;
+    margin-top: 13px;
+  }
+
   .bton {
-    padding: 11px 20px !important;
+    padding: 10px 15px !important;
     font-weight: 400 !important;
-    font-size: 13px !important;
+    font-size: 15px !important;
+  }
+
+  .bton-1 {
+    padding: 10px 15px !important;
+    font-weight: 400 !important;
+    font-size: 15px !important;
+    border-radius: 50px !important;
+  }
+
+  .bton-2 {
+    padding: 10px 15px !important;
+    font-weight: 400 !important;
+    font-size: 15px !important;
+    border-radius: 50px !important;
   }
 
   .breadcrumbs {
@@ -1598,15 +1546,21 @@ End Global CSS
     font-size: 13px !important;
   }
 
+  .header .header-inner .logo {
+    max-width: 100% !important;
+    margin: 0px !important;
+  }
+
   .header .header-inner .mobile-nav {
     margin-top: 12px !important;
     display: none !important;
     margin: 0 !important;
+    transition: all 0.3s ease !important;
   }
 
   .header .header-inner .get-quote {
     margin-top: 12px !important;
-    display: none !important;
+    /* display: none !important; */
     margin: 0 !important;
   }
 
@@ -1901,7 +1855,7 @@ End Global CSS
   .pricing-table .section-content {
     margin: 35px 0px !important;
     padding: 0 80px !important;
-}
+  }
 
   .blog .single-news {
     margin: 15px 0 !important;
@@ -2045,7 +1999,7 @@ End Global CSS
     z-index: 333 !important;
     position: absolute !important;
     position: relative !important;
-    padding-bottom: 20px !important;
+    padding: 0px 20px 0px !important;
     background: #fff !important;
   }
 
@@ -2060,10 +2014,10 @@ End Global CSS
   }
 
   .mob_bton {
-    display: none !important;
+    display: block !important;
     background: transparent !important;
     padding: 0 !important;
-    margin-top: 25px !important;
+    margin-top: 0px !important;
   }
 
   .mob_menu .mob_icon-bar {
@@ -2084,7 +2038,7 @@ End Global CSS
     box-shadow: none !important;
   }
 
-  .mob_nav {
+  .header .header-inner .mobile-nav .mob_nav {
     display: none;
     clear: both !important;
     color: #2C2D3F !important;
@@ -2094,81 +2048,19 @@ End Global CSS
     text-align: center !important;
   }
 
-  .mob_nav.show {
+  .header .header-inner .mobile-nav .mob_nav.show {
     display: block !important;
   }
 
-  .mob_nav li {
+  .header .header-inner .mobile-nav .mob_nav li {
     padding: 6px 0px;
   }
 
-  .mob_nav li div {
+  .header .header-inner .mobile-nav .mob_nav li div {
     color: #2C2D3F !important;
     transition: all 0.4s ease !important;
     background: none !important;
     padding: 0px 10px !important;
-  }
-
-  .mob_nav .mob_item div,
-  .mob_nav .mob_parent-link div {
-    padding: 0 10px !important;
-    background: transparent !important;
-  }
-
-  .mob_nav li div i {
-    display: none !important;
-    margin: 0 !important;
-  }
-
-  .mob_nav li:hover div {
-    color: #1A76D1 !important;
-  }
-
-  .mob_nav li .dropdown li div {
-    color: #2C2D3F !important;
-    background: transparent !important;
-  }
-
-  .mob_nav li .dropdown li div:hover {
-    color: #1A76D1 !important;
-  }
-
-  .mob_nav li .mob_item {
-    background: transparent !important;
-  }
-
-  .mob_nav .mob_row,
-  .mob_nav div {
-    padding: 0 !important;
-    margin: 0 !important;
-    padding: 6px 0 !important;
-    font-weight: 400 !important;
-  }
-
-  .mob_menu .mob_icon-bar {
-    background-color: #1A76D1 !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-
-  .mob_nav .mob_arrow {
-    color: #2C2D3F !important;
-  }
-
-  .mob_nav li:hover .mob_arrow {
-    color: #1A76D1 !important;
-  }
-
-  .mob_menu .mob_icon-bar {
-    display: block !important;
-    width: 25px !important;
-    height: 3px !important;
-    -webkit-border-radius: 1px !important;
-    -moz-border-radius: 1px !important;
-    border-radius: 1px !important;
-    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, .25) !important;
-    -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, .25) !important;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, .25) !important;
   }
 
   .header .main-menu {
@@ -2184,7 +2076,7 @@ End Global CSS
     margin-top: 18px !important;
   }
 
-  .header .mob_nav {
+  .header .header-inner .mobile-nav .mob_nav {
     margin-top: 15px !important;
   }
 
@@ -2202,17 +2094,35 @@ End Global CSS
 
   .header .header-inner .mobile-nav {
     margin-top: 12px !important;
+    display: block !important;
+    margin: 0 !important;
+  }
+
+  .header .header-inner .logo {
+    max-width: 10% !important;
+    margin: 0px !important;
+    padding: 15px 0px !important;
+  }
+
+  .header .header-inner .mobile-bton .bton-1 {
+    padding: 10px 15px !important;
+    font-size: 15px !important;
+    border-radius: 50px !important;
+  }
+
+  .header .header-inner .mobile-bton .bton-2 {
+    padding: 10px 15px !important;
+    font-size: 15px !important;
+    border-radius: 50px !important;
+  }
+
+  .header .header-inner .navigation {
+    margin-top: 12px !important;
     display: none !important;
     margin: 0 !important;
   }
 
-  .header .header-inner .get-quote {
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  .header .header-inner .get-quote .bton {
-    color: #fff !important;
+  .header .header-inner .header-btn {
     display: none !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -2260,7 +2170,19 @@ End Global CSS
     font-weight: 400 !important;
   }
 
-  .bton {
+  /* .bton {
+    padding: 11px 20px !important;
+    font-weight: 400 !important;
+    font-size: 13px !important;
+  } */
+
+  .bton-1 {
+    padding: 11px 20px !important;
+    font-weight: 400 !important;
+    font-size: 13px !important;
+  }
+
+  .bton-2 {
     padding: 11px 20px !important;
     font-weight: 400 !important;
     font-size: 13px !important;
@@ -2542,7 +2464,7 @@ End Global CSS
   .pricing-table .section-content {
     margin: 30px 0px !important;
     padding: 0 20px !important;
-}
+  }
 
   .blog .single-news {
     margin: 15px 0 !important;
@@ -2906,10 +2828,22 @@ End Global CSS
     font-size: 13px !important;
   }
 
-  .bton {
-    padding: 11px 20px !important;
-    font-weight: 400 !important;
-    font-size: 13px !important;
+  .header .header-inner .logo {
+    max-width: 15% !important;
+    margin: 0px !important;
+    padding: 10px 0px !important;
+  }
+
+  .header .header-inner .mobile-bton .bton-1 {
+    padding: 10px 15px !important;
+    font-size: 15px !important;
+    border-radius: 50px !important;
+  }
+
+  .header .header-inner .mobile-bton .bton-2 {
+    padding: 10px 15px !important;
+    font-size: 15px !important;
+    border-radius: 50px !important;
   }
 
   .header .header-inner .mobile-nav {
@@ -2920,6 +2854,12 @@ End Global CSS
     margin-top: 12px !important;
     display: none !important;
     margin: 0 !important;
+  }
+
+  .header .header-inner .header-btn {
+    display: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   .top-link {
@@ -3168,7 +3108,7 @@ End Global CSS
   .pricing-table .section-content {
     margin: 30px 0px !important;
     padding: 0 20px !important;
-}
+  }
 
   .blog .single-news {
     margin: 15px 0 !important;
