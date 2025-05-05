@@ -1636,10 +1636,6 @@ End Global CSS
     padding-top: 15px !important;
   }
 
-  .slider .single-slider {
-    height: 380px !important;
-  }
-
   .lawyer {
     background: #fff !important;
     margin: 0 !important;
@@ -1660,6 +1656,7 @@ End Global CSS
 
   .slider .single-slider {
     position: relative !important;
+    height: 440px !important;
   }
 
   .slider .single-slider:before {
@@ -1681,6 +1678,7 @@ End Global CSS
 
   .slider .single-slider .text {
     margin-top: 80px !important;
+    max-width: 50% !important;
   }
 
   .slider.index2 .single-slider .text {
@@ -2921,7 +2919,7 @@ End Global CSS
   }
 
   .slider .single-slider .text {
-    margin: 20px 5px 0px !important;
+    margin: 45px 5px 0px !important;
   }
 
   .slider .single-slider .button .bton {
