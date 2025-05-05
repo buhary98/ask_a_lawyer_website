@@ -18,66 +18,66 @@ const Lawyers = () => {
   const lawyers = [
     {
       image: LawyerImg1,
-      name: "Ava Martinez",
-      title: "Corporate & Business Law Expert",
+      name: "Chaudhry M. Kamran",
+      title: "Principal Solicitor",
       description:
-        "Specializes in legal compliance, contracts, and governance for businesses of all sizes.",
+        "He leads the legal team, offering strategic advice, overseeing complex cases, ensuring compliance, and maintaining high professional standards while representing clients with expertise, integrity, and dedication.",
     },
     {
       image: LawyerImg2,
-      name: "Daniel Singh",
-      title: "Litigation & Dispute Resolution",
+      name: "Dosani Mehboobali Ahmedali",
+      title: "Senior Associate",
       description:
-        "Experienced in court and arbitration for civil and commercial disputes.",
+        "He handles complex legal matters, mentors junior staff, and supports case strategy development. They bring extensive experience, ensuring high-quality legal advice, client representation, and efficient case management.",
     },
     {
       image: LawyerImg3,
-      name: "Lena O'Hara",
-      title: "Regulatory & Compliance Advisor",
+      name: "Kotwani Monisha",
+      title: "Associate",
       description:
-        "Ensures institutions meet legal and ethical standards, mitigating legal risks.",
+        "She supports senior lawyers in legal research, drafting documents, and managing client cases. They contribute to case preparation, ensure accuracy, and develop expertise across various legal practice areas.",
     },
     {
       image: LawyerImg4,
-      name: "Michael Zhou",
-      title: "International Business Law",
+      name: "Ahmed Ashfaq",
+      title: "Pending Admission as a Solicitor",
       description:
-        "Handles cross-border legal matters, trade regulations, and business structuring.",
+        "A legal professional pending admission as a Solicitor, actively gaining practical experience, supporting legal teams, and preparing for full qualification while demonstrating strong commitment and legal knowledge.",
     },
     {
       image: LawyerImg5,
-      name: "Ava Martinez",
-      title: "Corporate & Business Law Expert",
+      name: "Irene Cheng",
+      title: "Solicitor (Consultant)",
       description:
-        "Specializes in legal compliance, contracts, and governance for businesses of all sizes.",
+        "She offers specialized legal expertise on a flexible basis, advising on complex issues, supporting case strategy, and enhancing the firm’s capabilities without full-time engagement or operational responsibilities.",
     },
     {
       image: LawyerImg6,
-      name: "Daniel Singh",
-      title: "Litigation & Dispute Resolution",
+      name: "Simran Sajhwani",
+      title: "Trainee Solicitor",
       description:
-        "Experienced in court and arbitration for civil and commercial disputes.",
+        "She undergoes structured training across legal departments, gaining hands-on experience in casework, client interaction, and legal procedures, building essential skills toward becoming a fully qualified solicitor.",
     },
     {
       image: LawyerImg7,
-      name: "Lena O'Hara",
-      title: "Regulatory & Compliance Advisor",
+      name: "Ann Cheung",
+      title: "Senior Associate",
       description:
-        "Ensures institutions meet legal and ethical standards, mitigating legal risks.",
+        "She is a seasoned legal professional who manages complex cases, advises clients, mentors junior lawyers, and contributes to strategic decisions, ensuring high-quality legal services and consistent client satisfaction.",
     },
     {
       image: LawyerImg8,
-      name: "Michael Zhou",
-      title: "International Business Law",
+      name: "Soumya Jain",
+      title: "Registered Foreign Lawyer (India)",
       description:
-        "Handles cross-border legal matters, trade regulations, and business structuring.",
+        "She provides expert legal insight on Indian law, supporting cross-border matters, advising on international cases, and collaborating with local teams to ensure culturally informed legal solutions.",
     },
     {
       image: LawyerImg9,
-      name: "Michael Zhou",
-      title: "International Business Law",
+      name: "Rafay Ali",
+      title: "Trainee Solicitor",
       description:
-        "Handles cross-border legal matters, trade regulations, and business structuring.",
+        "He gains practical legal experience under supervision, rotating through various departments, assisting with research, drafting, and client work, while developing skills essential for qualification as a solicitor.",
     },
   ];
 
@@ -121,71 +121,3 @@ const Lawyers = () => {
 };
 
 export default Lawyers;
-
-/* import React from "react";
-import "./Schedule.css";
-
-const Schedule = () => {
-  const scheduleData = [
-    {
-      icon: "fa fa-ambulance",
-      title: "Corporate & Business Law",
-      description:
-        "Corporate & Business Law deals with legal aspects of businesses, ensuring compliance and protecting interests. It covers contracts, corporate structuring, and regulatory matters, assisting startups to large corporations with essential legal documentation and governance.",
-      link: "#",
-      label: "Legal Solutions for Businesses & Enterprises",
-    },
-    {
-      icon: "fa fa-prescription",
-      title: "Litigation & Dispute Resolution",
-      description:
-        "Litigation & Dispute Resolution specializes in handling legal conflicts through mediation, arbitration, or court proceedings. It covers civil and criminal cases, ensuring fair settlements and effective legal representation for individuals, businesses, and organizations.",
-      link: "#",
-      label: "Expert Representation & Conflict Resolution",
-    },
-    {
-      icon: "fa fa-clock",
-      title: "Regulatory & Compliance Law",
-      description:
-        "Regulatory & Compliance Law ensures businesses, institutions, and individuals follow legal regulations, policies, and industry standards. It helps prevent violations, penalties, and risks, ensuring ethical operations and adherence to governmental and corporate requirements.",
-      link: "#",
-      label: "Ensuring Legal Compliance & Risk Management",
-    },
-  ];
-
-  return (
-    <section className="schedule">
-      <div className="container">
-        <div className="schedule-inner">
-          <div className="row">
-            {scheduleData.map((item, index) => (
-              <div
-                className={`col-lg-3 col-md-${index === 2 ? "12" : "6"} col-12`}
-                key={index}
-              >
-                <div
-                  className={`single-schedule ${
-                    index === 0 ? "first" : index === 1 ? "middle" : "last"
-                  }`}
-                >
-                  <div className="inner">
-                    <div className="icon">
-                      <i className={item.icon}></i>
-                    </div>
-                    <div className="single-content">
-                      <span>{item.label}</span>
-                      <h4>{item.title}</h4>
-                      <p>{item.description}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default Schedule; */
