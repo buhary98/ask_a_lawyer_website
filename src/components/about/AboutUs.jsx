@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-
-import "./AboutUs.css";
 import VideoPopup from "../videopopup/VideoPopUp";
+import "./AboutUs.css";
 
 const AboutUs = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,7 +26,7 @@ const AboutUs = () => {
         <div className="row">
           <div className="col-lg-6 col-12">
             <div className="about-left">
-              <div className="video-image">
+              {/* <div className="video-image">
                 <div className="promo-video">
                   <div className="waves-block">
                     <div className="waves wave-1"></div>
@@ -41,7 +40,7 @@ const AboutUs = () => {
                 >
                   <i className="fa fa-play"></i>
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="col-lg-6 col-12">
