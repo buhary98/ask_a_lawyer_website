@@ -7,7 +7,7 @@ const ChooseUs = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section className="why-choose section">
+    <section className="why-choose section" id="choose">
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
@@ -73,11 +73,9 @@ const ChooseUs = () => {
               </div>
             </div>
           </div>
-
-          {/* Right Side Video Section */}
           <div className="col-lg-6 col-12">
             <div className="choose-right">
-              <div className="video-image">
+              {/* <div className="video-image">
                 <div className="promo-video">
                   <div className="waves-block">
                     <div className="waves wave-1"></div>
@@ -85,15 +83,13 @@ const ChooseUs = () => {
                     <div className="waves wave-3"></div>
                   </div>
                 </div>
-
-                {/* Open Video Popup on Click */}
                 <button
                   className="video video-popup"
                   onClick={() => setIsOpen(true)}
                 >
                   <i className="fa fa-play"></i>
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

@@ -1,6 +1,11 @@
 /*===================
 	Why choose CSS
 =====================*/
+
+.why-choose {
+    background: #fff;
+}
+
 .why-choose .choose-left h3 {
     font-size: 24px;
     font-weight: 600;
@@ -24,16 +29,10 @@
     margin-bottom: 35px;
 }
 
-.why-choose .choose-left .list {}
-
 .why-choose .choose-left .list li {
     color: #868686;
     margin-bottom: 12px;
 }
-
-/* .why-choose .choose-left .list li:last-child {
-    margin-bottom: 0px;
-} */
 
 .why-choose .choose-left .list li i {
     height: 15px;
@@ -48,22 +47,47 @@
     margin-right: 16px;
 }
 
-/* Start Faq CSS */
-.why-choose {
-    background: #fff;
-}
-
 .why-choose .choose-right {
     height: 100%;
     width: 100%;
-    background-image: url('../../assets/images/video-bg.jpg');
+    background-image: url('../../assets/images/choose-us.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
 }
 
-.why-choose .choose-right .video {
+.why-choose .choose-right .video-image .waves-block .waves {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: #fff;
+    opacity: 0;
+    border-radius: 100%;
+    -webkit-animation: waves 3s ease-in-out infinite;
+    animation: waves 3s ease-in-out infinite;
+    left: 50%;
+    margin-left: -100px;
+    top: 50%;
+    margin-top: -100px;
+}
+
+.why-choose .choose-right .video-image .waves-block .wave-1 {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+}
+
+.why-choose .choose-right .video-image .waves-block .wave-2 {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.why-choose .choose-right .video-image .waves-block .wave-3 {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+.why-choose .choose-right .video-image .video {
     color: #fff;
     height: 70px;
     width: 70px;
@@ -80,39 +104,8 @@
     padding-left: 4px;
 }
 
-.why-choose .choose-right .video:hover {
+.why-choose .choose-right .video-image .video:hover {
     transform: scale(1.1);
-}
-
-.why-choose .video-image .waves-block .waves {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    background: #fff;
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    border-radius: 100%;
-    -webkit-animation: waves 3s ease-in-out infinite;
-    animation: waves 3s ease-in-out infinite;
-    left: 50%;
-    margin-left: -100px;
-    top: 50%;
-    margin-top: -100px;
-}
-
-.why-choose .video-image .waves-block .wave-1 {
-    -webkit-animation-delay: 0s;
-    animation-delay: 0s;
-}
-
-.why-choose .video-image .waves-block .wave-2 {
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
-}
-
-.why-choose .video-image .waves-block .wave-3 {
-    -webkit-animation-delay: 2s;
-    animation-delay: 2s;
 }
 
 /*=======================
