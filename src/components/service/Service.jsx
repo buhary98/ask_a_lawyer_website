@@ -126,7 +126,6 @@ const Service = () => {
                 <i className={`fa-solid ${service.icon}`}></i>
                 <h4>{service.title}</h4>
                 <p>{service.description}</p>
-                {/* <div className="bton">Know More...</div> */}
               </div>
             </div>
           ))}
