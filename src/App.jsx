@@ -13,7 +13,6 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 
 import PreLoader from "./components/preloader/PreLoader";
 import ScrollToTop from "./components/header/ScrollToTop";
-// import ProFeatures from "./components/pro-features/ProFeatures";
 import SubHeader from "./components/header/SubHeader";
 import Header from "./components/header/Header";
 import Banner from "./components/banner/Banner";

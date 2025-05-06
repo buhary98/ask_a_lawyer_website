@@ -1692,15 +1692,15 @@ End Global CSS
     border-radius: 4px !important;
   }
 
-  .Feautes.index2 {
+  .feautes.index2 {
     padding-top: 70px !important;
   }
 
-  .Feautes .single-features::before {
+  .feautes .single-features::before {
     display: none !important;
   }
 
-  .Feautes .single-features {
+  .feautes .single-features {
     text-align: center !important;
     position: relative !important;
     padding: 10px 155px !important;
@@ -2260,11 +2260,11 @@ End Global CSS
     border-radius: 4px !important;
   }
 
-  .Feautes.index2 {
+  .feautes.index2 {
     padding-top: 50px !important;
   }
 
-  .Feautes .single-features .signle-icon i {
+  .feautes .single-features .signle-icon i {
     font-size: 42px !important;
     left: 50% !important;
     margin-left: -40px !important;
@@ -2273,18 +2273,18 @@ End Global CSS
     line-height: 80px !important;
   }
 
-  .Feautes .single-features::before {
+  .feautes .single-features::before {
     display: none !important;
   }
 
-  .Feautes .single-features {
+  .feautes .single-features {
     text-align: center !important;
     position: relative !important;
     padding: 0px !important;
     margin: 15px 0 !important;
   }
 
-  .Feautes .single-features h3 {
+  .feautes .single-features h3 {
     padding-top: 105px !important;
     font-size: 20px !important;
   }
@@ -2936,7 +2936,7 @@ End Global CSS
     display: none !important;
   }
 
-  .Feautes .single-features .signle-icon i {
+  .feautes .single-features .signle-icon i {
     font-size: 42px !important;
     left: 50% !important;
     margin-left: -40px !important;
@@ -2945,18 +2945,18 @@ End Global CSS
     line-height: 80px !important;
   }
 
-  .Feautes .single-features::before {
+  .feautes .single-features::before {
     display: none !important;
   }
 
-  .Feautes .single-features {
+  .feautes .single-features {
     text-align: center !important;
     position: relative !important;
     padding: 0px !important;
     margin: 15px 0 !important;
   }
 
-  .Feautes .single-features h3 {
+  .feautes .single-features h3 {
     padding-top: 105px !important;
     font-size: 20px !important;
   }
