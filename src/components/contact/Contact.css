@@ -5,30 +5,6 @@
     background: #fff;
 }
 
-.contact.single-page {
-    background: #fff;
-    padding-top: 100px 0;
-    padding: 0;
-    padding: 100px 0;
-}
-
-.contact.single-page .contact-inner {
-    padding: 40px;
-    box-shadow: 0px 0px 10px #00000024;
-    border-radius: 5px;
-}
-
-.contact.single-page .title {}
-
-.contact.single-page .title h3 {
-    font-size: 25px;
-    display: block;
-    margin-bottom: 10px;
-    font-weight: 600;
-}
-
-.contact.single-page .title p {}
-
 .contact .form {
     margin-top: 30px;
 }
@@ -37,7 +13,7 @@
     margin-bottom: 1rem;
 }
 
-.contact .form input {
+.contact .form .form-group input {
     width: 100%;
     height: 50px;
     border: 1px solid #eee;
@@ -50,7 +26,7 @@
     border-radius: 4px;
 }
 
-.contact .form textarea {
+.contact .form .form-group textarea {
     width: 100%;
     height: 200px;
     padding: 18px;
@@ -60,101 +36,21 @@
     border-radius: 4px;
 }
 
-.contact .form-group .nice-select {
-    width: 100%;
-    height: 50px;
-    line-height: 50px;
-    border: 1px solid #eee;
-    text-transform: capitalize;
-    padding: 0px 18px;
-    color: #999;
-    font-size: 14px;
-    font-weight: 400;
-    border-radius: 4px;
-    font-weight: 400;
+.contact .contact-image {
+    text-align: center;
 }
 
-.contact .form-group .nice-select::after {
-    right: 20px;
-    color: #757575;
-}
-
-.contact .form-group .list {
-    border-radius: 4px;
-}
-
-.contact .form-group .list li {
-    color: #757575;
-    border-radius: 0;
-}
-
-.contact .form-group .list li.selected {
-    color: #757575;
-    font-weight: 400;
-}
-
-.contact .form-group .list li:hover {
-    color: #fff;
-    background: #1A76D1;
-}
-
-.contact .contact-image {}
-
-.contact.single-page .button .bton {
-    width: 100%;
-}
-
-.contact .button .bton {
+.contact .form .form-group .button .bton {
     font-weight: 500;
 }
 
-.contact .button .bton:hover {
+.contact .form .form-group .button .bton:hover {
     color: #fff;
 }
 
 .contact .form p {
     margin-top: 10px;
     color: #868686;
-}
-
-.contact.single-page .work-hour {
-    background: #1A76D1;
-    padding: 40px;
-    box-shadow: 0px 0px 10px #00000024;
-    border-radius: 5px;
-}
-
-.contact.single-page .work-hour h3 {
-    font-size: 25px;
-    display: block;
-    font-weight: 600;
-    margin-bottom: 20px;
-    color: #fff;
-}
-
-.contact.single-page .time-sidual {
-    margin-top: 15px;
-}
-
-.contact.single-page .time-sidual {
-    overflow: hidden;
-}
-
-.contact.single-page .time-sidual li {
-    display: block;
-    color: #fff;
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-.contact.single-page .time-sidual li span {
-    display: inline-block;
-    float: right;
-}
-
-.contact.single-page .day-head .time {
-    font-weight: 400;
-    float: right;
 }
 
 /*==========================

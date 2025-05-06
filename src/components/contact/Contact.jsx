@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import ContactImg2 from "../../assets/images/contact-img.png";
+import ContactImg from "../../assets/images/contact-img.png";
 
 import "./Contact.css";
 
@@ -42,7 +42,6 @@ const Contact = () => {
             </div>
           </div>
         </div>
-
         <div className="row">
           <div className="col-lg-6 col-md-12">
             <form className="form" onSubmit={handleSubmit}>
@@ -59,7 +58,6 @@ const Contact = () => {
                     />
                   </div>
                 </div>
-
                 <div className="col-12">
                   <div className="form-group">
                     <input
@@ -72,7 +70,6 @@ const Contact = () => {
                     />
                   </div>
                 </div>
-
                 <div className="col-12">
                   <div className="form-group">
                     <input
@@ -85,7 +82,6 @@ const Contact = () => {
                     />
                   </div>
                 </div>
-
                 <div className="col-lg-12 col-md-12 col-12">
                   <div className="form-group">
                     <textarea
@@ -98,7 +94,6 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
-
               <div className="row">
                 <div className="col-lg-5 col-md-4 col-12">
                   <div className="form-group">
@@ -109,16 +104,15 @@ const Contact = () => {
                     </div>
                   </div>
                 </div>
-
                 <div className="col-lg-7 col-md-8 col-12">
-                  <p>( We will confirm by a text message )</p>
+                  <p>( We will confirm by an Email )</p>
                 </div>
               </div>
             </form>
           </div>
           <div className="col-lg-6 col-md-12">
             <div className="contact-image">
-              <img src={ContactImg2} alt="contact" />
+              <img src={ContactImg} alt="contact" />
             </div>
           </div>
         </div>
