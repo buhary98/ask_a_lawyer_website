@@ -41,20 +41,23 @@ const Facts = () => {
         ) {
           counter.classList.add("counter-loaded");
           const target = parseInt(counter.getAttribute("data-count"), 10);
-          let start = 0;
           const duration = factsData[index].fast ? 5000 : 10000;
-          const stepTime = Math.abs(Math.floor(duration / target));
+          const startTime = performance.now();
 
-          const updateCounter = () => {
-            start += 1;
-            counter.textContent = start;
-            if (start < target) {
-              setTimeout(updateCounter, stepTime);
+          const updateCounter = (currentTime) => {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const value = Math.floor(progress * target);
+            counter.textContent = value;
+
+            if (progress < 1) {
+              requestAnimationFrame(updateCounter);
             } else {
               counter.textContent = target;
             }
           };
-          updateCounter();
+
+          requestAnimationFrame(updateCounter);
         }
       });
     };
