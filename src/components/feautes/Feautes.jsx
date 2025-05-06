@@ -32,14 +32,14 @@ const Feautes = () => {
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
     if (section) {
-      const offset = 100;
+      const offset = document.querySelector("header")?.offsetHeight + 80 || 100;
       const top = section.offsetTop - offset;
       window.scrollTo({ top, behavior: "smooth" });
     }
   };
 
   return (
-    <section className="Feautes section">
+    <section className="feautes section" id="feautes">
       <div className="container">
         <div className="row">
           <div className="col-lg-12">

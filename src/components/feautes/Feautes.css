@@ -1,25 +1,17 @@
 /*=============================
-	Start Feautes CSS
+	Start feautes CSS
 ===============================*/
-.Feautes {
+.feautes {
     padding-top: 0;
 }
 
-.Feautes.index2 {
-    padding-top: 100px;
-}
-
-.Feautes.testimonial-page {
-    padding-top: 100px;
-}
-
-.Feautes .single-features {
+.feautes .single-features {
     text-align: center;
     position: relative;
     padding: 10px 20px;
 }
 
-.Feautes .single-features::before {
+.feautes .single-features::before {
     position: absolute;
     content: "";
     right: -72px;
@@ -28,15 +20,15 @@
     border-bottom: 3px dotted #1a76d1;
 }
 
-.Feautes .single-features.last::before {
+.feautes .single-features.last::before {
     display: none;
 }
 
-.Feautes .single-features .signle-icon {
+.feautes .single-features .signle-icon {
     position: relative;
 }
 
-.Feautes .single-features .signle-icon i {
+.feautes .single-features .signle-icon i {
     font-size: 50px;
     color: #1a76d1;
     position: absolute;
@@ -54,30 +46,30 @@
     transition: all 0.4s ease;
 }
 
-.Feautes .single-features:hover .signle-icon i {
+.feautes .single-features:hover .signle-icon i {
     background: #1A76D1;
     color: #fff;
     border-color: transparent;
 }
 
-.Feautes .single-features h3 {
+.feautes .single-features h3 {
     padding-top: 128px;
-    color: #2C2D3F;
+    color: #2C2D3f;
     font-weight: 600;
     font-size: 21px;
 }
 
-.Feautes .single-features p {
+.feautes .single-features p {
     margin-top: 20px;
 }
 
-.section-bottom {
+.feautes .section-bottom {
     margin: 25px 0px;
     text-align: center;
     padding: 0px 0px;
 }
 
-.section-bottom h5 {
+.feautes .section-bottom h5 {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 30px;
@@ -85,5 +77,5 @@
 }
 
 /*=============================
-	End Feautes CSS
+	End feautes CSS
 ===============================*/
