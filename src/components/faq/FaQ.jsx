@@ -106,7 +106,7 @@ const FaQ = () => {
 
                   return (
                     <div
-                      className={`card fadeIn${
+                      className={`card animate__animated animate__fadeIn${
                         groupIndex === 0 ? "Left" : "Right"
                       }`}
                       style={{ animationDelay: `${(index + 1) * 0.1}s` }}
@@ -119,6 +119,13 @@ const FaQ = () => {
                           aria-expanded={isActive}
                         >
                           {faq.question}
+                          <span className="icon">
+                            <i
+                              className={`fas ${
+                                isActive ? "fa-minus" : "fa-plus"
+                              }`}
+                            ></i>
+                          </span>
                         </div>
                       </div>
                       <div
