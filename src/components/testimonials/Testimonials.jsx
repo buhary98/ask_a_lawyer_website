@@ -50,7 +50,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="testimonials overlay section">
+    <section className="testimonials overlay section" id="testimonials">
       <div className="container">
         <div className="row">
           <div className="col-lg-12 col-md-12 col-12">

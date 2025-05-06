@@ -45,24 +45,15 @@
     align-items: center;
 }
 
-.testimonials .content .testimonial-item h4 {
+.testimonials .content .testimonial-item .inner-content h4 {
     font-size: 19px;
     font-weight: 700;
     color: #fff;
     letter-spacing: 0.5px;
     margin-bottom: 15px;
-    /* min-height: 35px; */
 }
 
-/* .testimonials .content .testimonial-item span {
-    display: block;
-    font-weight: 600;
-    font-size: 14px;
-    color: #fff;
-    min-height: 55px;
-} */
-
-.testimonials .content .testimonial-item p {
+.testimonials .content .testimonial-item .inner-content p {
     color: #fff;
     font-size: 14px;
     font-weight: 400;
