@@ -1,10 +1,6 @@
 /*=======================
 	Start Fun Facts CSS
 =========================*/
-.fun-facts.section {
-    padding: 120px 0;
-}
-
 .fun-facts {
     position: relative;
     background: url('../../assets/images/facts.png');
@@ -12,6 +8,10 @@
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+.fun-facts.section {
+    padding: 120px 0;
 }
 
 .fun-facts .single-fun {
@@ -50,7 +50,7 @@
     padding-left: 80px;
 }
 
-.fun-facts .single-fun span {
+.fun-facts .single-fun .content span {
     color: #fff;
     font-weight: 600;
     font-size: 30px;
@@ -63,7 +63,7 @@
     margin-bottom: 7px;
 }
 
-.fun-facts .single-fun p {
+.fun-facts .single-fun .content p {
     color: #fff;
     font-size: 15px;
 }

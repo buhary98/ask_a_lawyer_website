@@ -69,7 +69,7 @@ const Facts = () => {
     };
   }, []);
   return (
-    <div id="fun-facts" className="fun-facts section overlay">
+    <div className="fun-facts section overlay" id="facts">
       <div className="container">
         <div className="row">
           {factsData.map((fact, index) => (
