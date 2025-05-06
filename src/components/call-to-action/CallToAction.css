@@ -8,7 +8,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    /* transition: background-position 0.1s ease-out; */
 }
 
 .call-action .content {
@@ -53,26 +52,6 @@
 
 .call-action .content .bton:last-child {
     margin-right: 0px;
-}
-
-.call-action .content .second {
-    border: 1px solid #fff;
-    color: #fff;
-    background: transparent;
-}
-
-.call-action .content .second:before {
-    background: #fff;
-}
-
-.call-action .content .second:hover {
-    color: #1a76d1;
-    border-color: transparent;
-    background: #fff;
-}
-
-.call-action .content .second i {
-    margin-left: 10px;
 }
 
 /*===============================
