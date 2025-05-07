@@ -3,13 +3,90 @@ import React from "react";
 import "./Footer.css";
 
 const Footer = () => {
+  const socialMedia = [
+    {
+      name: "facebook",
+      link: "https://facebook.com",
+    },
+    {
+      name: "google-plus",
+      link: "https://plus.google.com",
+    },
+    {
+      name: "twitter",
+      link: "https://twitter.com",
+    },
+    {
+      name: "vimeo",
+      link: "https://vimeo.com",
+    },
+    {
+      name: "pinterest",
+      link: "https://pinterest.com",
+    },
+  ];
+
+  const quickLink = [
+    [
+      {
+        name: "Home",
+        link: "home",
+      },
+      {
+        name: "About Us",
+        link: "about",
+      },
+      {
+        name: "Our Services",
+        link: "services",
+      },
+      {
+        name: "Reviews",
+        link: "testimonials",
+      },
+      {
+        name: "Our Plans",
+        link: "pricing",
+      },
+    ],
+    [
+      {
+        name: "Why Choose Us",
+        link: "choose",
+      },
+      {
+        name: "Our Features",
+        link: "feautes",
+      },
+      {
+        name: "Lawyers",
+        link: "lawyers",
+      },
+      {
+        name: "FAQs",
+        link: "fAQs",
+      },
+      {
+        name: "Our Blogs",
+        link: "blogs",
+      },
+    ],
+  ];
+
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      const offset = document.querySelector("header")?.offsetHeight + 80 || 100;
+      const top = section.offsetTop - offset;
+      window.scrollTo({ top, behavior: "smooth" });
+    }
+  };
+
   return (
-    <footer id="footer" className="footer">
-      {/* Footer Top */}
+    <footer className="footer section" id="footer">
       <div className="footer-top">
         <div className="container">
           <div className="row">
-            {/* About Us */}
             <div className="col-lg-3 col-md-6 col-12">
               <div className="single-footer">
                 <h2>About Us</h2>
@@ -20,55 +97,36 @@ const Footer = () => {
                   connect you with experienced legal professionals for
                   reliable&nbsp;advice and guidance.
                 </p>
-                {/* Social Links */}
                 <ul className="social">
-                  {[
-                    "facebook",
-                    "google-plus",
-                    "twitter",
-                    "vimeo",
-                    "pinterest",
-                  ].map((platform) => (
-                    <li key={platform}>
-                      <a href="#">
-                        <i className={`fa-brands fa-${platform}`}></i>
+                  {socialMedia.map((platform, index) => (
+                    <li key={index}>
+                      <a
+                        href={platform.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i className={`fa-brands fa-${platform.name}`}></i>
                       </a>
                     </li>
                   ))}
                 </ul>
               </div>
             </div>
-            {/* Quick Links */}
             <div className="col-lg-3 col-md-6 col-12">
               <div className="single-footer f-link">
                 <h2>Quick Links</h2>
                 <div className="row">
-                  {[
-                    [
-                      "Home",
-                      "About Us",
-                      "Services",
-                      "Our Cases",
-                      "Other Links",
-                    ],
-                    [
-                      "Consulting",
-                      "Finance",
-                      "Testimonials",
-                      "FAQ",
-                      "Contact Us",
-                    ],
-                  ].map((column, index) => (
-                    <div key={index} className="col-lg-6 col-md-6 col-12">
+                  {quickLink.map((column, colIndex) => (
+                    <div key={colIndex} className="col-lg-6 col-md-6 col-12">
                       <ul>
-                        {column.map((link) => (
-                          <li key={link}>
-                            <div>
+                        {column.map((linkItem, linkIndex) => (
+                          <li key={linkIndex}>
+                            <div onClick={() => scrollToSection(linkItem.link)}>
                               <i
                                 className="fa-solid fa-caret-right"
                                 aria-hidden="true"
                               ></i>
-                              {link}
+                              {linkItem.name}
                             </div>
                           </li>
                         ))}
@@ -132,7 +190,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      {/* Copyright */}
       <div className="copyright">
         <div className="container">
           <div className="row">
@@ -141,13 +198,6 @@ const Footer = () => {
                 <p>
                   © Copyright 2025 Ask A Lawyer (Chaudhry Solicitors) | All
                   Rights Reserved
-                  {/* <a
-                    href="https://www.wpthemesgrid.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    wpthemesgrid.com
-                  </a> */}
                 </p>
               </div>
             </div>

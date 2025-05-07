@@ -26,6 +26,31 @@
     position: relative;
 }
 
+.footer .single-footer h2 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    text-transform: capitalize;
+    position: relative;
+}
+
+.footer .single-footer h2::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0px;
+    height: 3px;
+    width: 50px;
+    background: #fff;
+}
+
+.footer .single-footer p {
+    color: #fff;
+}
+
 .footer .single-footer .social {
     margin-top: 25px;
 }
@@ -59,12 +84,6 @@
     border-color: transparent;
 }
 
-/* .footer .single-footer .social li div i {} */
-
-.footer .single-footer.f-link li div i {
-    margin-right: 10px;
-}
-
 .footer .single-footer.f-link li {
     display: block;
     margin-bottom: 12px;
@@ -89,25 +108,26 @@
     padding-left: 8px;
 }
 
-.footer .single-footer h2 {
-    color: #fff;
-    font-size: 20px;
-    font-weight: 600;
-    text-transform: capitalize;
-    margin-bottom: 40px;
-    padding-bottom: 20px;
-    text-transform: capitalize;
-    position: relative;
+.footer .single-footer.f-link li div i {
+    margin-right: 10px;
 }
 
-.footer .single-footer h2::before {
-    position: absolute;
-    content: "";
-    left: 0;
-    bottom: 0px;
-    height: 3px;
-    width: 50px;
-    background: #fff;
+.footer .copyright {
+    background: #1A76D1;
+    padding: 25px 0px 25px 0px;
+    text-align: center;
+}
+
+.footer .copyright .copyright-content p {
+    color: #fff;
+}
+
+.footer .copyright .copyright-content p a {
+    color: #fff;
+    font-weight: 400;
+    text-decoration: underline;
+    display: inline-block;
+    margin-left: 4px;
 }
 
 /* .footer .single-footer .time-sidual {
@@ -129,15 +149,6 @@
     display: inline-block;
     float: right;
 } */
-
-/* .footer .single-footer .day-head .time {
-    font-weight: 400;
-    float: right;
-} */
-
-.footer .single-footer p {
-    color: #fff;
-}
 
 /* .footer .single-footer .newsletter-inner {
     margin-top: 20px;
@@ -219,24 +230,6 @@
 .footer .single-footer .newsletter-inner .button:hover i {
     color: #2C2D3F;
 } */
-
-.footer .copyright {
-    background: #1A76D1;
-    padding: 25px 0px 25px 0px;
-    text-align: center;
-}
-
-.footer .copyright .copyright-content p {
-    color: #fff;
-}
-
-.footer .copyright .copyright-content p a {
-    color: #fff;
-    font-weight: 400;
-    text-decoration: underline;
-    display: inline-block;
-    margin-left: 4px;
-}
 
 /*=========================
 	End Footer CSS
