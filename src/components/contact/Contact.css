@@ -40,6 +40,11 @@
     text-align: center;
 }
 
+.contact .contact-image img {
+    max-width: 500px;
+    height: auto;
+}
+
 .contact .form .form-group .button .bton {
     font-weight: 500;
 }
