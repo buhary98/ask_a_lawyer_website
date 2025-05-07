@@ -2,17 +2,17 @@ import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 
-import BannerImg1Lg from "../../assets/images/slider-lg-1.png";
-import BannerImg1Md from "../../assets/images/slider-md-1.png";
-import BannerImg1Sm from "../../assets/images/slider-sm-1.png";
+import BannerImg1Lg from "../../assets/images/slider-lg-1.jpg";
+import BannerImg1Md from "../../assets/images/slider-md-1.jpg";
+import BannerImg1Sm from "../../assets/images/slider-sm-1.jpg";
 
-import BannerImg2Lg from "../../assets/images/slider-lg-2.png";
-import BannerImg2Md from "../../assets/images/slider-md-2.png";
-import BannerImg2Sm from "../../assets/images/slider-sm-2.png";
+import BannerImg2Lg from "../../assets/images/slider-lg-2.jpg";
+import BannerImg2Md from "../../assets/images/slider-md-2.jpg";
+import BannerImg2Sm from "../../assets/images/slider-sm-2.jpg";
 
-import BannerImg3Lg from "../../assets/images/slider-lg-3.png";
-import BannerImg3Md from "../../assets/images/slider-md-3.png";
-import BannerImg3Sm from "../../assets/images/slider-sm-3.png";
+import BannerImg3Lg from "../../assets/images/slider-lg-3.jpg";
+import BannerImg3Md from "../../assets/images/slider-md-3.jpg";
+import BannerImg3Sm from "../../assets/images/slider-sm-3.jpg";
 
 import "swiper/css";
 import "swiper/css/navigation";
