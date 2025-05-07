@@ -82,7 +82,7 @@ const Lawyers = () => {
   ];
 
   return (
-    <section className="lawyer">
+    <section className="lawyer" id="lawyers">
       <div className="container">
         <div className="lawyer-inner">
           <Swiper

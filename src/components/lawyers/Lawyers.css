@@ -5,12 +5,12 @@
     background: #fff;
     margin: 0;
     padding: 0;
-    height: 450px;
+    height: 495px;
 }
 
 .lawyer .lawyer-inner {
     position: relative;
-    transform: translateY(-10%);
+    /* transform: translateY(-10%); */
     z-index: 9;
 }
 
