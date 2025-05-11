@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import ContactImg from "../../assets/images/contact-img.png";
+import ContactImg from "../../assets/images/contact-img.jpg";
 
 import "./Contact.css";
 
