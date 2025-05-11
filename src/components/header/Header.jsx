@@ -226,7 +226,7 @@ const Header = () => {
                     className="d-none d-lg-inline"
                     style={{ paddingLeft: "10px" }}
                   >
-                    Our Course
+                    Our Course (CPD)
                   </span>
                 </Link>
               </div>

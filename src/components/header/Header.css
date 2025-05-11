@@ -41,12 +41,12 @@
     z-index: 999;
     width: 100%;
     text-align: center;
-    padding: 0px 45px;
+    padding: 0px 30px;
 }
 
 .header .header-inner .logo {
     float: left;
-    margin-top: 18px;
+    margin-top: 14px;
 }
 
 .header .header-inner .mobile-bton {
