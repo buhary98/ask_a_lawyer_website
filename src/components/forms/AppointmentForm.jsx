@@ -14,7 +14,7 @@ const AppointmentForm = () => {
     lastName: "",
     email: "",
     phone: "",
-    date: null,
+    date: "",
     time: "",
     message: "",
   });
@@ -47,13 +47,7 @@ const AppointmentForm = () => {
       lastName: "",
       email: "",
       phone: "",
-      address1: "",
-      address2: "",
-      city: "",
-      region: "",
-      country: "Hong Kong",
-      zipCode: "",
-      date: null,
+      date: "",
       time: "",
       message: "",
     });
@@ -173,6 +167,20 @@ const AppointmentForm = () => {
                   </div>
                 </div>
 
+                {/* <div className="col-lg-6 col-md-6 col-12">
+                  <div className="form-group">
+                    <input
+                      type="date"
+                      name="date"
+                      value={formData.date}
+                      onChange={(e) =>
+                        setFormData({ ...formData, date: e.target.value })
+                      }
+                      required
+                    />
+                  </div>
+                </div> */}
+
                 <div className="col-lg-6 col-md-6 col-12">
                   <div className="form-group">
                     <select
@@ -180,6 +188,7 @@ const AppointmentForm = () => {
                       name="time"
                       value={formData.time}
                       onChange={handleChange}
+                      required
                     >
                       <option value="" disabled>
                         Appointment Time
