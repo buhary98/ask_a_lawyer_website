@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+import { createClient } from "contentful";
 
-import LawyerImg1 from "../../assets/images/lawyer1.png";
+/* import LawyerImg1 from "../../assets/images/lawyer1.png";
 import LawyerImg2 from "../../assets/images/lawyer2.png";
 import LawyerImg3 from "../../assets/images/lawyer3.png";
 import LawyerImg4 from "../../assets/images/lawyer4.png";
@@ -10,12 +11,12 @@ import LawyerImg5 from "../../assets/images/lawyer5.png";
 import LawyerImg6 from "../../assets/images/lawyer6.png";
 import LawyerImg7 from "../../assets/images/lawyer7.png";
 import LawyerImg8 from "../../assets/images/lawyer8.png";
-import LawyerImg9 from "../../assets/images/lawyer9.png";
+import LawyerImg9 from "../../assets/images/lawyer9.png"; */
 
 import "./Lawyers.css";
 
 const Lawyers = () => {
-  const lawyers = [
+  /* const lawyers = [
     {
       image: LawyerImg1,
       name: "Chaudhry M. Kamran",
@@ -79,7 +80,38 @@ const Lawyers = () => {
       description:
         "He gains practical legal experience under supervision, rotating through various departments, assisting with research, drafting, and client work, while developing skills essential for qualification as a solicitor.",
     },
-  ];
+  ]; */
+
+  const [service, setService] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  const client = createClient({
+    space: "3tvfrrjmp3fa",
+    environment: "master",
+    accessToken: "46iNHGr3UmpPYaEQMtn-_N3ZSqYVHat5SZEEKpgirfQ",
+  });
+
+  useEffect(() => {
+    const fetchService = async () => {
+      try {
+        const response = await client.getEntries({
+          content_type: "aalLawyersList",
+          order: "sys.createdAt",
+        });
+        setService(response.items);
+        setLoading(false);
+      } catch (error) {
+        setError(error);
+        setLoading(false);
+      }
+    };
+
+    fetchService();
+  }, []);
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error fetching news: {error.message}</div>;
 
   return (
     <section className="lawyer" id="lawyers">
@@ -101,14 +133,17 @@ const Lawyers = () => {
               1200: { slidesPerView: 3, spaceBetween: 30 },
             }}
           >
-            {lawyers.map((lawyer, index) => (
-              <SwiperSlide key={index}>
+            {service.map((lawyer) => (
+              <SwiperSlide key={lawyer.sys.id}>
                 <div className="lawyer-card">
-                  <img src={lawyer.image} alt={lawyer.name} />
+                  <img
+                    src={`https:${lawyer.fields.lawyerImage.fields.file.url}`}
+                    alt={lawyer.fields.lawyerName}
+                  />
                   <div className="lawyer-overlay">
-                    <h4>{lawyer.name}</h4>
-                    <span>{lawyer.title}</span>
-                    <p>{lawyer.description}</p>
+                    <h4>{lawyer.fields.lawyerName}</h4>
+                    <span>{lawyer.fields.lawyerTitle}</span>
+                    <p>{lawyer.fields.lawyerDescription}</p>
                   </div>
                 </div>
               </SwiperSlide>
